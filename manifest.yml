@@ -1,0 +1,6 @@
+applications:
+- name: OIX-front 
+  memory: 250M
+  instances: 1
+  random-route: true
+  buildpack: staticfile_buildpack 

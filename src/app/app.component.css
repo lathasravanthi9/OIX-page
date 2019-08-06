@@ -1,0 +1,30 @@
+.ibm-alternate-background{
+    background-image: url('src\webimage.jpg');
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 820px;
+    background-color: rgba(242,238,242,.6);
+}
+.container {
+    position: relative;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+
+#ibm-leadspace-body{
+    padding-bottom: 30px;
+}
+
+#ibm-content-body {
+    padding-top: 20px;
+}

@@ -1,0 +1,223 @@
+<div class="mat-app-background basic-container">
+    
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    
+  <mat-toolbar class="example-toolbar ibm-sitenav-menu-container" data-widgetprocessed="true">
+      
+    <span mat-icon-button (click)="snav.toggle()" style="cursor: pointer"><mat-icon>menu</mat-icon></span>
+
+        <div class="ibm-col-6-2">
+            <h1 class="ibm-h3 ibm-bold" style="padding-top: 18px;">IBM Offering Information</h1>
+        </div>
+  
+        <div class="ibm-col-6-1"></div>
+
+        <div class="ibm-sitenav-menu-list menu-list">
+          <ul role="menubar">
+            <li>
+              <p class="ibm-button-link ibm-left ibm-padding-bottom-0" >
+              </p>
+            </li>
+  
+            <li class="ibm-haschildlist">
+              <button role="menuitem " tabindex="-1" style="background-color: #0072c3; color: white;">Recent Announcements</button>
+              <ul id="ranno" role="menu" class="">
+                <li id="US" class="ibm-highlight">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/s/897/ENUSRA-US/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">United States</a>
+                </li>
+                <li id="CN">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/n/649/ENUSRA-CAN/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Canada</a>
+                </li>
+                <li id="LA">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/a/899/ENUSRA-LA/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Latin America</a>
+                </li>
+                <li id="Europe">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/a/877/ENUSRA-EMEA/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Europe</a>
+  
+                </li>
+                <li id="EN">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/n/760/ENUSRA-JPN/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Japan</a>
+                </li>
+                <li id="AP">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/p/872/ENUSRA-AP/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Asia Pacific</a>
+  
+  
+                </li>
+  
+              </ul>
+            </li>
+  
+            <li class="ibm-haschildlist">
+              <button role="menuitem" tabindex="-1" style="background-color: #0072c3; color: white;">Recent Sales Manuals</button>
+              <ul id="rsman" role="menu" class="">
+                <li id="US" class="ibm-highlight">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/s/897/ENUSRecentSalesManuals/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">United States</a>
+                </li>
+                <li id="CN">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/s/649/ENUSRecentSalesManuals/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Canada</a>
+                </li>
+                <li id="LA">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/s/899/ENUSRecentSalesManuals/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Latin America</a>
+                </li>
+                <li id="Europe">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/s/877/ENUSRecentSalesManuals/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Europe</a>
+  
+                </li>
+                <li id="EN">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/s/760/ENUSRecentSalesManuals/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Japan</a>
+                </li>
+                <li id="AP">
+                  <a role="menuitem"
+                    href="https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/s/872/ENUSRecentSalesManuals/index.html&amp;lang=en&amp;request_locale=en"
+                    a="" target="_blank">Asia Pacific</a>
+  
+                </li>
+  
+              </ul>
+            </li>
+            <ul class="ibm-link-list">
+                <li>
+                  <a class="ibm-help-link" href="#"></a>
+                </li>
+            </ul>
+          </ul>
+
+        </div>
+      
+  </mat-toolbar> 
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [opened]="true" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
+        <app-tree-checklist></app-tree-checklist>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color: whitesmoke">
+      <!-- <p>wqnrlqkjenglkewqng</p>
+      <p>wqnrlqkjenglkewqng</p>
+      <p>wqnrlqkjenglkewqng</p> -->
+      <main>
+
+        <div class="search">
+          
+            <form autocomplete="off" novalidate #reactiveForm="ngForm" (ngSubmit)="submitReactiveForm(reactiveForm)" >
+              <div class="ibm-col-6-3">
+                <div class="autocomplete">
+      
+                  <input type="text" class="form-control" name="searchwrd" id="MPPEFSCH" maxlength="100" value=""
+                    placeholder="Enter the Title, letter#, content, document# " [(ngModel)]="text" #box (keyup)="0"
+                    (keyup)="onKey($event)" (keydown)="change($event)" (click)="one($event)" (keypress)="eventHandler($event)"
+                    aria-label="Search" />
+        
+                  <div class="ibm-ind-link" id="clearText" class="close" *ngIf="text" (click)="clear()"
+                    style="float: right; margin-top: -36px;  margin-right: 9% ;">
+                    <a class="ibm-close-link"style= "margin-top:0.2%; color:black"></a>
+                  </div>
+                  
+                  <div class="oix-seachfilter" id="search_filter">
+                    <input type="hidden" name="MPPEFFTR" id="MPPEFFTR" value="CONTENTS">
+                    <ul id="search_filter_ul">
+                      <li id="entiredoc_filter" class="" value="CONTENTS">Search for "<span id="content"
+                          class="">{{box.value}}</span>" in entire document</li>
+                      <li id="title_filter" class="" value="TITLE">Search for "<span id="title" class="">{{box.value}}</span>"
+                        in title </li>
+                      <li id="letter_filter" class="" value="LETTERNO">Search for "<span id="letternum"
+                          class="">{{box.value}}</span>" in letter #</li>
+                      <li id="product_filter" class="" value="DOCNO">Search for "<span id="productnum"
+                          class="">{{box.value}}</span>" in product or document #</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>                             
+                <button id="search-submit" class="ibm-search-link" value="Submit" type="submit"
+                [disabled]="!reactiveForm.form.valid" aria-label="Submit" role="button"></button>  
+            </form>
+          </div>
+        <br><br>
+          <!-- filters -->
+          <div class="ibm-col-4-1"></div>
+          <div class="ibm-col-4-1"></div>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+          <div class="ibm-col-12-8" id="filterModule" style="height:60px" ng-show='chkselct' >Hi Welcome to Angularjs
+           	     
+         
+          </div>
+
+          
+          
+      <br><br><br><br>
+      <!-- search results -->
+      <div class="ibm-col-12-11">
+        <div class="ibm-col-4-1"></div>
+        <div class=" ibm-col-6-3 ibm-columns es-search-result" style="width:70%">
+          <div *ngFor="let item of arrData">
+    
+            <div *ngFor="let rec of item.searchresults.searchresultlist">
+              <div class="ibm-columns es-search-result">
+                <a class="ibm-h5 ibm-bold ibm-textcolor-blue-30" target="_blank"
+                  href="/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_sm/s/899/ENUSRECENTSALESMANUALS/index.html&amp;request_locale=en">
+                  <span class="ibm-textcolor-blue-30">{{rec.title}}</span>
+                </a>
+                <br>
+                <span class="ibm-small ibm-bold ibm-textcolor-gray-30"> Published: </span>
+                <span class="ibm-date-time ibm-small ibm-bold" *ngFor='let att of rec.docattributes'
+                  style="color: black">{{att.dcdate|date}}</span>
+                <span class="ibm-small ibm-bold ibm-textcolor-gray-30 ">| Document Number:</span>
+                <span class="ibm-small ibm-bold ibm-textcolor-gray-30 " style="color:black"
+                  *ngFor='let id of rec.docattributes'> {{id.skdocno}}</span>
+                <div>
+    
+                  <span class="ibm-small ibm-bold ibm-textcolor-gray-30" *ngIf="rec.description!=''">
+                    <span class="ibm-small ibm-bold ibm-textcolor-gray-30" style="color:black"> Summary: </span>
+                    {{rec.description}}
+                  </span>
+                </div>
+                <p class="ibm-small"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+  
+  
+  <app-footer></app-footer>
+</div>
+</div>
+
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

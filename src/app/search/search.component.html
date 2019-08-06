@@ -1,0 +1,69 @@
+<div id="ibm-content-wrapper">
+  <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+
+    <div id="ibm-leadspace-head" class="ibm-background-blue-core ibm-alternate ibm-alternate-background">
+      <form autocomplete="off" novalidate #reactiveForm="ngForm" (ngSubmit)="submitReactiveForm(reactiveForm)" (keydown)="keyDownFunction($event)">
+      
+      <div id="ibm-leadspace-body">
+        <div class="container-flex ibm-alternate-background" style="background-image: url(bandimages/unfinbus1.jpg)"> 
+          <div class="box reactive-form" style="color: rgba(0,0,0,.8);">
+            <h2 id="ibm-pagetitle-h1" class="ibm-h2 ibm-light" align="center">What would you like to search for ?</h2>
+        
+            <div class="container">
+              <div class="ng-autocomplete">
+                
+                <input type="text" class="form-control" name="searchwrd" id="MPPEFSCH" maxlength="100" value="" 
+                placeholder="Enter the Title, letter#, content, document#" [(ngModel)]="text" 
+                #box (keyup)="0" (keyup)="onKey($event)" (keydown)="change($event)"
+                (click)="one($event)" (keypress)="eventHandler($event)" aria-label="Search"/>
+                             
+                <div class="ibm-ind-link" id="clearText" class="close" *ngIf="text" (click)="clear()" style="float: right; margin-top: -45px;">
+                  <a class="ibm-close-link"></a>
+                </div>
+
+                <div class="oix-seachfilter" id="search_filter">
+                    <input type="hidden" name="MPPEFFTR" id="MPPEFFTR" value="CONTENTS">
+                    <ul id="search_filter_ul" (click)="liSelect($event)">
+                      <li id="entiredoc_filter" class="" value="CONTENTS">Search for "<span id="content" class="">{{box.value}}</span>" in entire document</li>
+                      <li id="title_filter" class="" value="TITLE">Search for "<span id="title" class="">{{box.value}}</span>" in title </li>
+                      <li id="letter_filter" class="" value="LETTERNO">Search for "<span id="letternum" class="">{{box.value}}</span>" in letter #</li>
+                      <li id="product_filter" class="" value="DOCNO">Search for "<span id="productnum" class="">{{box.value}}</span>" in product or document #</li>
+                    </ul>
+                </div> 
+              </div>
+            
+              <div>
+                <button id="search-submit" class="ibm-search-link" routerLink="/search" value="Submit" type="submit" [disabled]="reactiveForm.invalid" aria-label="Submit" role="button" (click)="submitReactiveForm($event)"></button>
+              </div>
+            </div>   
+          </div>
+        </div>
+      </div>
+
+      <div class="ibm-columns checkbox">
+            
+          <div class="ibm-form-elem-grp" align="center">
+            <span class="ibm-input-group ibm-col-4-1">
+              <input id="id1" name="checkbgrp2" type="checkbox" value="ANCA" (click)="GetSelected($event)"/> <label for="id1"> Announcement Letters</label>
+            </span>
+            <span class="ibm-input-group ibm-col-4-1">
+                  <input id="id2" name="checkbgrp2" type="checkbox" value="DD" (click)="GetSelected($event)"/> <label for="id2">  HW & SW desc (sales manual, RPQ) </label>
+            </span>
+            <span class="ibm-input-group ibm-col-4-1">
+                <input id="id3" name="checkbgrp2" type="checkbox" value="SA" (click)="GetSelected($event)"/> <label for="id3"> Sales support information </label>
+            </span>
+            <span class="ibm-input-group ibm-col-4-1">
+                <input id="id4" name="checkbgrp2" type="checkbox" value="PM" (click)="GetSelected($event)"/> <label for="id4"> Marketing Materials</label>
+            </span>
+          </div>
+
+      </div>
+        
+    </form>
+  </div>
+
+  </header>
+
+  </div>
+
+<app-footer></app-footer>

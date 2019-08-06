@@ -1,0 +1,26 @@
+.ibm-alternate-background{
+    background-color: black;
+    opacity: 0.7;
+}
+
+.ibm-leadspace-head{
+    height: 200px;
+}
+
+.checkbox{
+    position: absolute;
+    bottom: 4%;    
+}
+
+.ibm-input-group{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.ibm-help-link{
+    padding: 20px 0 20px 0;
+}
+
+.ibm-right{
+    text-align: left;
+}

@@ -1,0 +1,48 @@
+button{
+    background-color: white;
+    border: none;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #0072c3;
+}
+
+::ng-deep .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #0072c3;
+}
+
+mat-checkbox{
+    padding: 7px;
+}
+
+mat-checkbox:hover{
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+/*
+::ng-deep .mat-checkbox-input {
+    margin: auto!important;
+    height: 16px!important;
+    width: 16px;
+}
+
+::ng-deep .mat-checkbox-frame {
+    background-color: #0370b0;
+    border-color: #0370b0;
+    color: #fdfdfd;
+} */
+
+.mat-tree-node{
+    padding-right: 20px;
+}
+
+/* ::ng-deep button[disabled], button[disabled]:hover, input[class*="ibm-btn-"][disabled], input[class*="ibm-btn-"][disabled]:hover, input[disabled], input[disabled]:hover {
+    cursor: default;
+    background-color: white;
+    border: none;
+} */
+
+::ng-deep input[type=checkbox]:checked {
+    background-color: #a77e2d;
+    color: #ffffff;
+  }
