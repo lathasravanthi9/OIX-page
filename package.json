@@ -30,7 +30,7 @@
     "angular-ng-autocomplete": "^1.1.13",
     "core-js": "^2.5.7",
     "hammerjs": "^2.0.8",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "nativescript-ui-sidedrawer": "^6.0.0",
     "ngx-typeahead": "^6.2.0",
     "rxjs": "~6.4.0",
